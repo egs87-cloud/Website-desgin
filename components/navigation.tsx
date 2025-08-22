@@ -37,13 +37,6 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
       >
         Campus Involvements
       </Button>
-      <Button
-        variant={activeTab === "projects" ? "default" : "outline"}
-        onClick={() => onTabChange("projects")}
-        className="px-6"
-      >
-        Projects
-      </Button>
     </nav>
   )
 }

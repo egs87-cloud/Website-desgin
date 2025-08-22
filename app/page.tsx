@@ -198,84 +198,6 @@ export default function Portfolio() {
     </div>
   )
 
-  const renderProjects = () => (
-    <div className="space-y-8">
-      <h2 className="text-3xl font-bold text-foreground mb-8 text-center font-[var(--font-heading)]">
-        Projects & Leadership
-      </h2>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-xl font-[var(--font-heading)]">Athletic Measurement Tools Development</CardTitle>
-          <CardDescription>Wu Tsai Jayhawk Athletic Performance Lab</CardDescription>
-          <Badge variant="secondary" className="w-fit">
-            2025
-          </Badge>
-        </CardHeader>
-        <CardContent>
-          <p className="text-foreground leading-relaxed mb-4">
-            Led the development of comprehensive full-stack athletic measurement tools that integrate advanced hardware
-            sensors with sophisticated software analytics. This project involved working with marker-less motion capture
-            systems, accelerometers, and force plates to create a unified platform for athletic performance assessment.
-          </p>
-          <p className="text-foreground leading-relaxed">
-            The system provides real-time analysis of athletic movement patterns and generates actionable insights for
-            performance optimization. This project demonstrated my ability to bridge the gap between cutting-edge sports
-            science research and practical application in athletic training environments.
-          </p>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-xl font-[var(--font-heading)]">Vector Biology Research Publications</CardTitle>
-          <CardDescription>Heck Lab, USDA-ARS</CardDescription>
-          <Badge variant="secondary" className="w-fit">
-            2021-2024
-          </Badge>
-        </CardHeader>
-        <CardContent>
-          <p className="text-foreground leading-relaxed mb-4">
-            Authored two research papers currently pending publication, focusing on vector biology and disease
-            transmission mechanisms. These publications represent years of dedicated research involving complex data
-            analysis, experimental design, and molecular biological engineering approaches to understanding disease
-            vectors.
-          </p>
-          <p className="text-foreground leading-relaxed">
-            The research contributes to our understanding of how disease vectors can be controlled through innovative
-            biological approaches, with potential applications in public health and disease prevention strategies. This
-            work showcases my ability to conduct independent research and communicate complex scientific findings to the
-            broader scientific community.
-          </p>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-xl font-[var(--font-heading)]">Climbing Wall Route-Setting Leadership</CardTitle>
-          <CardDescription>Lindseth Climbing Wall, Cornell University</CardDescription>
-          <Badge variant="secondary" className="w-fit">
-            2021-Present
-          </Badge>
-        </CardHeader>
-        <CardContent>
-          <p className="text-foreground leading-relaxed mb-4">
-            Serve as a route-setter and team leader at Cornell's climbing wall, responsible for designing and
-            implementing challenging climbing routes that cater to climbers of all skill levels. This role requires
-            creativity, safety consciousness, and strong communication skills to work effectively with both team members
-            and the climbing community.
-          </p>
-          <p className="text-foreground leading-relaxed">
-            Leading route-setting activities at height while managing safety protocols has developed my leadership
-            abilities and attention to detail. I've fostered a welcoming and inclusive environment that encourages
-            climbers to push their limits while maintaining the highest safety standards. This experience has taught me
-            the importance of balancing challenge with accessibility in community-focused environments.
-          </p>
-        </CardContent>
-      </Card>
-    </div>
-  )
-
   const renderInvolvements = () => (
     <div className="space-y-8">
       <h2 className="text-3xl font-bold text-foreground mb-8 text-center font-[var(--font-heading)]">
@@ -421,7 +343,6 @@ export default function Portfolio() {
           {activeTab === "experience" && renderExperience()}
           {activeTab === "education" && renderEducation()}
           {activeTab === "involvements" && renderInvolvements()}
-          {activeTab === "projects" && renderProjects()}
         </div>
       </div>
 
