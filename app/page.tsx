@@ -45,13 +45,13 @@ export default function Portfolio() {
             <a href="mailto:egs87@cornell.edu">Get In Touch</a>
           </Button>
           <Button variant="outline" asChild>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/egs87-cloud" target="_blank" rel="noopener noreferrer">
               <Github className="w-4 h-4 mr-2" />
               GitHub
             </a>
           </Button>
           <Button variant="outline" asChild>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/elijah-schechter-6bb146274/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="w-4 h-4 mr-2" />
               LinkedIn
             </a>
