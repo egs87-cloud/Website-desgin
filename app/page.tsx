@@ -24,7 +24,7 @@ export default function Portfolio() {
     },
     {
       src: "/images/life-photo-4.png",
-      alt: "Mountain hiking adventure",
+      alt: "Mount Skåla in Norway",
     },
     {
       src: "/images/life-photo-5.png",
@@ -379,7 +379,8 @@ export default function Portfolio() {
                 alt="Elijah route-setting at the climbing wall"
                 width={320}
                 height={400}
-                className="rounded-lg border-2 border-primary/20 object-cover"
+                className="rounded-lg border-2 border-primary/20 object-cover object-center w-full h-[400px] md:h-[500px]"
+                style={{ objectPosition: "center 30%" }}
               />
             </div>
           </div>
