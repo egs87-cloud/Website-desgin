@@ -111,12 +111,20 @@ export default function Portfolio() {
         </CardHeader>
         <CardContent>
           <p className="text-foreground leading-relaxed">
-            As a Performance Science Intern at the Wu Tsai Jayhawk Lab in Lawrence Kansas, I conducted mass data set
-            analysis to inform research, reviewed known literature, and designed experiments. I collected and processed
-            large amounts of aggregate data, specifically within a Physiology and sport context. I also integrated
-            hardware and software to fully develop measurement tools. I had final deliverables in the form of
-            large-scale presentation of data in a digestible format, which is currently being using for further
-            experimental design.
+            As a Performance Science Intern at the{" "}
+            <a
+              href="https://hses.ku.edu/research/labs/jayhawk-athletic-performance"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 underline"
+            >
+              Wu Tsai Jayhawk Lab
+            </a>{" "}
+            in Lawrence Kansas, I conducted mass data set analysis to inform research, reviewed known literature, and
+            designed experiments. I collected and processed large amounts of aggregate data, specifically within a
+            Physiology and sport context. I also integrated hardware and software to fully develop measurement tools. I
+            had final deliverables in the form of large-scale presentation of data in a digestible format, which is
+            currently being used for further experimental design.
           </p>
         </CardContent>
       </Card>
@@ -157,17 +165,15 @@ export default function Portfolio() {
           </div>
 
           <p className="text-foreground leading-relaxed mb-6">
-            My academic journey at Cornell has been shaped by a rigorous curriculum that bridges traditional biological
-            sciences with cutting-edge computational approaches. Through courses in computational biology, statistics,
-            and computer science, I've developed a unique skill set that combines biological understanding with data
-            analysis capabilities.
+            My academic journey at Cornell has been varied, giving me a wide array of expertise from the molecular level
+            of biological sciences to the macro world of experimental design and data analysis. I have taken classes
+            that utilized computer science tools, data management tools, and visualization instruments.
           </p>
 
           <p className="text-foreground leading-relaxed mb-6">
             My coursework in pharmacology, comparative physiology, and genetics has provided me with a deep
-            understanding of biological systems at multiple scales, from molecular mechanisms to whole-organism
-            function. Laboratory courses in investigative biology have honed my experimental design skills and taught me
-            to approach scientific questions with methodical precision.
+            understanding of biological systems at multiple scales, from molecular to whole-organism function. I have
+            also collaborated in difficult laboratory classes including chemistry, physics, and biology.
           </p>
 
           <div className="mb-6">
@@ -206,6 +212,9 @@ export default function Portfolio() {
                 "Experimental Design",
                 "Literature Review",
                 "Statistical Analysis",
+                "Wetlabs",
+                "PCR",
+                "ELISA",
               ].map((skill) => (
                 <Badge key={skill} variant="default" className="text-xs">
                   {skill}
@@ -278,9 +287,9 @@ export default function Portfolio() {
           </p>
           <p className="text-foreground leading-relaxed">
             I organize and lead practice sessions, collaborate with community members to expand our reach, and help
-            develop programs that inspire the next generation of athletes. This experience has strengthened my
-            leadership skills while allowing me to give back to the sport that has shaped my own personal and academic
-            journey at Cornell.
+            develop programs that inspire the next generation of athletes. This position has strengthened my leadership
+            skills while allowing me to give back to the sport that has shaped my own personal and academic journey at
+            Cornell.
           </p>
         </CardContent>
       </Card>
