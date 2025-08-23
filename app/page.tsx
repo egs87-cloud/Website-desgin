@@ -122,7 +122,7 @@ export default function Portfolio() {
             </a>{" "}
             in Lawrence Kansas, I conducted mass data set analysis to inform research, reviewed known literature, and
             designed experiments. I collected and processed large amounts of aggregate data, specifically within a
-            Physiology and sport context. I also integrated hardware and software to fully develop measurement tools. I
+            physiology and sport context. I also integrated hardware and software to fully develop measurement tools. I
             had final deliverables in the form of large-scale presentation of data in a digestible format, which is
             currently being used for further experimental design.
           </p>
@@ -245,16 +245,14 @@ export default function Portfolio() {
           <div className="flex flex-col md:flex-row gap-6 items-start">
             <div className="flex-1">
               <p className="text-foreground leading-relaxed mb-4">
-                As a middle-distance specialist focusing on the 800-meters, I've achieved significant competitive
-                success including a second-place finish at the 2025 Ivy League Championship and scoring at the 2024 IC4A
-                Championship. These achievements represent the culmination of dedicated training and strategic
-                performance optimization.
+                I am a middle-distance specialist focusing on the 800-meters running for the Big Red! I've achieved
+                significant competitive success including a second-place finish at the 2025 Ivy League Championship and
+                scoring at the 2024 IC4A Championship.
               </p>
               <p className="text-foreground leading-relaxed">
-                Balancing over 20 hours of weekly training commitments with a full academic course load has taught me
-                exceptional time management and prioritization skills. Through this experience, I've developed a
-                comprehensive understanding of injury prevention, performance psychology, and the critical role of
-                teamwork in achieving individual and collective goals.
+                I balance over 20 hours of weekly training commitments with a full academic course load. Through this
+                experience, I've developed a comprehensive understanding of injury prevention, performance psychology,
+                and the critical role of teamwork in achieving individual and collective goals.
               </p>
             </div>
             <div className="w-full md:w-80 flex-shrink-0">
