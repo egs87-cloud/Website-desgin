@@ -5,12 +5,64 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Mail, Phone, MapPin, Github, Linkedin, ChevronDown } from "lucide-react"
+import { Mail, Phone, MapPin, Github, Linkedin, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState("home")
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0)
+
+  const lifePhotos = [
+    {
+      src: "/images/life-photo-2.png",
+      alt: "Cornell relay team at Penn Relays",
+    },
+    {
+      src: "/images/life-photo-3.png",
+      alt: "Group training run with the team",
+    },
+    {
+      src: "/images/life-photo-4.png",
+      alt: "Mountain hiking adventure",
+    },
+    {
+      src: "/images/life-photo-5.png",
+      alt: "Belaying at the climbing wall",
+    },
+    {
+      src: "/images/life-photo-6.png",
+      alt: "Bouldering session",
+    },
+    {
+      src: "/images/life-photo-7.png",
+      alt: "800m race in action",
+    },
+    {
+      src: "/images/life-photo-8.png",
+      alt: "Graduation celebration with friend",
+    },
+    {
+      src: "/images/life-photo-9.png",
+      alt: "Bouldering from above",
+    },
+    {
+      src: "/images/life-photo-10.png",
+      alt: "Route setting work",
+    },
+    {
+      src: "/images/life-photo-11.png",
+      alt: "Mountain hiking with companion",
+    },
+  ]
+
+  const nextPhoto = () => {
+    setCurrentPhotoIndex((prev) => (prev + 1) % lifePhotos.length)
+  }
+
+  const prevPhoto = () => {
+    setCurrentPhotoIndex((prev) => (prev - 1 + lifePhotos.length) % lifePhotos.length)
+  }
 
   const renderHome = () => (
     <div className="space-y-16">
@@ -122,7 +174,7 @@ export default function Portfolio() {
             </a>{" "}
             in Lawrence Kansas, I conducted mass data set analysis to inform research, reviewed known literature, and
             designed experiments. I collected and processed large amounts of aggregate data, specifically within a
-            physiology and sport context. I also integrated hardware and software to fully develop measurement tools. I
+            Physiology and sport context. I also integrated hardware and software to fully develop measurement tools. I
             had final deliverables in the form of large-scale presentation of data in a digestible format, which is
             currently being used for further experimental design.
           </p>
@@ -360,6 +412,83 @@ export default function Portfolio() {
     </div>
   )
 
+  const renderLifePhotos = () => (
+    <div className="space-y-8">
+      <h2 className="text-3xl font-bold text-foreground mb-8 text-center font-[var(--font-heading)]">Life Photos</h2>
+
+      <Card>
+        <CardContent className="pt-6">
+          <div className="relative">
+            {/* Main Photo Display */}
+            <div className="flex justify-center mb-6">
+              <div className="relative w-full max-w-2xl">
+                <Image
+                  src={lifePhotos[currentPhotoIndex].src || "/placeholder.svg"}
+                  alt={lifePhotos[currentPhotoIndex].alt}
+                  width={800}
+                  height={600}
+                  className="rounded-lg border-2 border-primary/20 object-cover object-center w-full h-[400px] md:h-[500px]"
+                  style={{ objectPosition: "center 30%" }}
+                />
+
+                {/* Navigation Arrows */}
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-background/80 hover:bg-background"
+                  onClick={prevPhoto}
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </Button>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-background/80 hover:bg-background"
+                  onClick={nextPhoto}
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </Button>
+              </div>
+            </div>
+
+            {/* Photo Thumbnails Carousel */}
+            <div className="flex justify-center">
+              <div className="flex gap-2 overflow-x-auto pb-2 max-w-full">
+                {lifePhotos.map((photo, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentPhotoIndex(index)}
+                    className={`flex-shrink-0 rounded-lg border-2 transition-all ${
+                      index === currentPhotoIndex
+                        ? "border-primary ring-2 ring-primary/20"
+                        : "border-muted hover:border-primary/50"
+                    }`}
+                  >
+                    <Image
+                      src={photo.src || "/placeholder.svg"}
+                      alt={photo.alt}
+                      width={80}
+                      height={60}
+                      className="rounded-md object-cover object-center w-20 h-15"
+                      style={{ objectPosition: "center 30%" }}
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Photo Counter */}
+            <div className="text-center mt-4">
+              <span className="text-sm text-muted-foreground">
+                {currentPhotoIndex + 1} of {lifePhotos.length}
+              </span>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  )
+
   return (
     <div className="min-h-screen bg-background">
       <div className="relative bg-gradient-to-br from-card to-background py-12 px-4">
@@ -370,6 +499,7 @@ export default function Portfolio() {
           {activeTab === "experience" && renderExperience()}
           {activeTab === "education" && renderEducation()}
           {activeTab === "involvements" && renderInvolvements()}
+          {activeTab === "photos" && renderLifePhotos()}
         </div>
       </div>
 

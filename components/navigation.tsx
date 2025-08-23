@@ -37,6 +37,13 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
       >
         Campus Involvements
       </Button>
+      <Button
+        variant={activeTab === "photos" ? "default" : "outline"}
+        onClick={() => onTabChange("photos")}
+        className="px-6"
+      >
+        Life Photos
+      </Button>
     </nav>
   )
 }
