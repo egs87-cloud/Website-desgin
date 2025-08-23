@@ -4,7 +4,8 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { Mail, Phone, MapPin, Github, Linkedin, ChevronDown } from "lucide-react"
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 
@@ -41,9 +42,28 @@ export default function Portfolio() {
           </div>
         </div>
         <div className="flex justify-center gap-4 flex-wrap">
-          <Button asChild className="bg-primary hover:bg-primary/90">
-            <a href="mailto:egs87@cornell.edu">Get In Touch</a>
-          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button className="bg-primary hover:bg-primary/90">
+                Get In Touch
+                <ChevronDown className="w-4 h-4 ml-2" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="center">
+              <DropdownMenuItem asChild>
+                <a href="tel:+16072208407" className="flex items-center gap-2 cursor-pointer">
+                  <Phone className="w-4 h-4" />
+                  Call (607) 220-8407
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a href="mailto:egs87@cornell.edu" className="flex items-center gap-2 cursor-pointer">
+                  <Mail className="w-4 h-4" />
+                  Email egs87@cornell.edu
+                </a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
           <Button variant="outline" asChild>
             <a href="https://github.com/egs87-cloud" target="_blank" rel="noopener noreferrer">
               <Github className="w-4 h-4 mr-2" />
