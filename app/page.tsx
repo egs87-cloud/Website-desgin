@@ -155,6 +155,34 @@ export default function Portfolio() {
 
       <Card>
         <CardHeader>
+          <CardTitle className="text-xl font-[var(--font-heading)]">Shoe and Tendon Research Assistant</CardTitle>
+          <CardDescription>Andarawis-Puri Tendon and Shoe Research Group • Ithaca, New York</CardDescription>
+          <Badge variant="secondary" className="w-fit">
+            August 2025-Present
+          </Badge>
+        </CardHeader>
+        <CardContent>
+          <p className="text-foreground leading-relaxed">
+            Currently I work in the{" "}
+            <a
+              href="https://andarawispurilab.mae.cornell.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 underline"
+            >
+              Andarawis-Puri lab
+            </a>{" "}
+            on campus developing an understanding of tendons and shoe design. This research project aims to understand
+            and quantify the role in which footwear compliances impact tendon mechanics. We used computer modeling to
+            simulate tendons and study human and animal biomechanics via dissection and motion capture. Both methods supplement
+            each other and build a strong foundation to investigate our hypothesis. These two projects will go on to the
+            development of a tendon favorable running shoe using 3d printing and material engineering.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
           <CardTitle className="text-xl font-[var(--font-heading)]">Performance Science Intern</CardTitle>
           <CardDescription>Wu Tsai Jayhawk Athletic Performance Lab • Lawrence, Kansas</CardDescription>
           <Badge variant="secondary" className="w-fit">
@@ -174,7 +202,7 @@ export default function Portfolio() {
             </a>{" "}
             in Lawrence Kansas, I conducted mass data set analysis to inform research, reviewed known literature, and
             designed experiments. I collected and processed large amounts of aggregate data, specifically within a
-            Physiology and sport context. I also integrated hardware and software to fully develop measurement tools. I
+            physiology and sport context. I also integrated hardware and software to fully develop measurement tools. I
             had final deliverables in the form of large-scale presentation of data in a digestible format, which is
             currently being used for further experimental design.
           </p>
