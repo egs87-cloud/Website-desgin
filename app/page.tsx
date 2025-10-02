@@ -162,7 +162,7 @@ export default function Portfolio() {
           </Badge>
         </CardHeader>
         <CardContent>
-          <p className="text-foreground leading-relaxed">
+          <p className="text-foreground leading-relaxed mb-6">
             Currently I work in the{" "}
             <a
               href="https://andarawispurilab.mae.cornell.edu/"
@@ -172,12 +172,37 @@ export default function Portfolio() {
             >
               Andarawis-Puri lab
             </a>{" "}
-            on campus developing an understanding of tendons and shoe design. This research project aims to understand
-            and quantify the role in which footwear compliances impact tendon mechanics. We used computer modeling to
-            simulate tendons and study human and animal biomechanics via dissection and motion capture. Both methods supplement
-            each other and build a strong foundation to investigate our hypothesis. These two projects will go on to the
-            development of a tendon favorable running shoe using 3d printing and material engineering.
+            on campus developing an understanding of tendons and shoe design. I play a role on two different projects,
+            both with running shoes at the forefront. The first research project aims to understand and quantify the
+            role in which footwear compliances impact tendon mechanics. We used computer modeling to simulate tendons
+            and study biomechanics via dissection and motion capture. This project will go on to the development of a
+            tendon favorable running shoe using 3d printing and material engineering. The second project I work on is a
+            variable viscoelastic running shoe that can change with the user's weight. For this project I examined the
+            Shore hardness of a variety of shoes and dove into the engineering potential of using air as a flexible
+            cushioning solution.
           </p>
+
+          {/* Research Images */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+            <div className="rounded-lg overflow-hidden border-2 border-primary/20">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-10-01%20at%205.42.29%E2%80%AFPM-6tvOrtETiUNsZTOFFhxnAJNenWUqdu.png"
+                alt="3D rendered tendon models used for biomechanical simulation"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="rounded-lg overflow-hidden border-2 border-primary/20">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-10-01%20at%205.40.26%E2%80%AFPM-XWedYxGtCl4qmEjNR83G0oSWwAYrXl.png"
+                alt="Cross-sectional view of shoe sole design with multiple layers"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
         </CardContent>
       </Card>
 
@@ -190,7 +215,7 @@ export default function Portfolio() {
           </Badge>
         </CardHeader>
         <CardContent>
-          <p className="text-foreground leading-relaxed">
+          <p className="text-foreground leading-relaxed mb-6">
             As a Performance Science Intern at the{" "}
             <a
               href="https://hses.ku.edu/research/labs/jayhawk-athletic-performance"
@@ -202,10 +227,20 @@ export default function Portfolio() {
             </a>{" "}
             in Lawrence Kansas, I conducted mass data set analysis to inform research, reviewed known literature, and
             designed experiments. I collected and processed large amounts of aggregate data, specifically within a
-            physiology and sport context. I also integrated hardware and software to fully develop measurement tools. I
+            Physiology and sport context. I also integrated hardware and software to fully develop measurement tools. I
             had final deliverables in the form of large-scale presentation of data in a digestible format, which is
             currently being used for further experimental design.
           </p>
+
+          <div className="rounded-lg overflow-hidden border-2 border-primary/20">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-07-27%20at%204.55.47%E2%80%AFPM.png-1UTMfkGKbLMkjsc1YCGejL3BBMwAtO.jpeg"
+              alt="Performance science lab setup with force plate analysis and biomechanics equipment"
+              width={800}
+              height={600}
+              className="w-full h-auto object-cover"
+            />
+          </div>
         </CardContent>
       </Card>
 
@@ -449,14 +484,14 @@ export default function Portfolio() {
         <CardContent className="pt-6">
           <div className="relative">
             {/* Main Photo Display */}
-            <div className="flex justify-center mb-6">
-              <div className="relative w-full max-w-2xl">
+            <div className="flex justify-center mb-4 md:mb-6">
+              <div className="relative w-full max-w-2xl px-2 sm:px-0">
                 <Image
                   src={lifePhotos[currentPhotoIndex].src || "/placeholder.svg"}
                   alt={lifePhotos[currentPhotoIndex].alt}
                   width={800}
                   height={600}
-                  className="rounded-lg border-2 border-primary/20 object-cover object-center w-full h-[400px] md:h-[500px]"
+                  className="rounded-lg border-2 border-primary/20 object-cover object-center w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
                   style={{ objectPosition: "center 30%" }}
                 />
 
@@ -464,30 +499,30 @@ export default function Portfolio() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-background/80 hover:bg-background"
+                  className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-background/80 hover:bg-background h-8 w-8 sm:h-10 sm:w-10"
                   onClick={prevPhoto}
                 >
-                  <ChevronLeft className="w-4 h-4" />
+                  <ChevronLeft className="w-3 h-3 sm:w-4 sm:h-4" />
                 </Button>
                 <Button
                   variant="outline"
                   size="icon"
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-background/80 hover:bg-background"
+                  className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-background/80 hover:bg-background h-8 w-8 sm:h-10 sm:w-10"
                   onClick={nextPhoto}
                 >
-                  <ChevronRight className="w-4 h-4" />
+                  <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
                 </Button>
               </div>
             </div>
 
             {/* Photo Thumbnails Carousel */}
-            <div className="flex justify-center">
-              <div className="flex gap-2 overflow-x-auto pb-2 max-w-full">
+            <div className="flex justify-center px-2 sm:px-0">
+              <div className="flex gap-1.5 sm:gap-2 overflow-x-auto pb-2 max-w-full scrollbar-hide snap-x snap-mandatory">
                 {lifePhotos.map((photo, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentPhotoIndex(index)}
-                    className={`flex-shrink-0 rounded-lg border-2 transition-all ${
+                    className={`flex-shrink-0 rounded-lg border-2 transition-all snap-center ${
                       index === currentPhotoIndex
                         ? "border-primary ring-2 ring-primary/20"
                         : "border-muted hover:border-primary/50"
@@ -498,7 +533,7 @@ export default function Portfolio() {
                       alt={photo.alt}
                       width={80}
                       height={60}
-                      className="rounded-md object-cover object-center w-20 h-15"
+                      className="rounded-md object-cover object-center w-16 h-12 sm:w-20 sm:h-15"
                       style={{ objectPosition: "center 30%" }}
                     />
                   </button>
@@ -507,8 +542,8 @@ export default function Portfolio() {
             </div>
 
             {/* Photo Counter */}
-            <div className="text-center mt-4">
-              <span className="text-sm text-muted-foreground">
+            <div className="text-center mt-3 md:mt-4">
+              <span className="text-xs sm:text-sm text-muted-foreground">
                 {currentPhotoIndex + 1} of {lifePhotos.length}
               </span>
             </div>
