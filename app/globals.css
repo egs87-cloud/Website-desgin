@@ -130,4 +130,9 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  /* Ensure dropdown menus appear above all other content */
+  [data-radix-popper-content-wrapper] {
+    z-index: 100 !important;
+  }
 }

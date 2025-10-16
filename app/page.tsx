@@ -17,42 +17,52 @@ export default function Portfolio() {
     {
       src: "/images/life-photo-2.png",
       alt: "Cornell relay team at Penn Relays",
+      objectPosition: "center 35%", // Center faces in team photo
     },
     {
       src: "/images/life-photo-3.png",
       alt: "Group training run with the team",
+      objectPosition: "center 40%", // Center group of people
     },
     {
       src: "/images/life-photo-4.png",
       alt: "Mount Skåla in Norway",
+      objectPosition: "center 45%", // Center person on mountain
     },
     {
       src: "/images/life-photo-5.png",
       alt: "Belaying at the climbing wall",
+      objectPosition: "center 30%", // Center face while belaying
     },
     {
       src: "/images/life-photo-6.png",
       alt: "Bouldering session",
+      objectPosition: "center 35%", // Center climber on wall
     },
     {
       src: "/images/life-photo-7.png",
       alt: "800m race in action",
+      objectPosition: "center 30%", // Center runner's face and upper body
     },
     {
       src: "/images/life-photo-8.png",
       alt: "Graduation celebration with friend",
+      objectPosition: "center 35%", // Center both people in graduation photo
     },
     {
       src: "/images/life-photo-9.png",
       alt: "Bouldering from above",
+      objectPosition: "center 40%", // Center climber from overhead view
     },
     {
       src: "/images/life-photo-10.png",
       alt: "Route setting work",
+      objectPosition: "center 35%", // Center person on ladder
     },
     {
       src: "/images/life-photo-11.png",
       alt: "Mountain hiking with companion",
+      objectPosition: "center 50%", // Center both hikers on summit
     },
   ]
 
@@ -96,24 +106,24 @@ export default function Portfolio() {
           </div>
         </div>
         <div className="flex justify-center gap-4 flex-wrap">
-          <DropdownMenu>
+          <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
-              <Button className="bg-primary hover:bg-primary/90">
+              <Button className="bg-primary hover:bg-primary/90 min-w-[140px]">
                 Get In Touch
                 <ChevronDown className="w-4 h-4 ml-2" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="center" className="z-50">
+            <DropdownMenuContent align="center" className="z-[100] min-w-[200px]" sideOffset={5}>
               <DropdownMenuItem asChild>
-                <a href="tel:+16072208407" className="flex items-center gap-2 cursor-pointer w-full">
+                <a href="tel:+16072208407" className="flex items-center gap-2 cursor-pointer w-full px-3 py-2">
                   <Phone className="w-4 h-4" />
-                  Call (607) 220-8407
+                  <span>Call (607) 220-8407</span>
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href="mailto:egs87@cornell.edu" className="flex items-center gap-2 cursor-pointer w-full">
+                <a href="mailto:egs87@cornell.edu" className="flex items-center gap-2 cursor-pointer w-full px-3 py-2">
                   <Mail className="w-4 h-4" />
-                  Email egs87@cornell.edu
+                  <span>Email egs87@cornell.edu</span>
                 </a>
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -500,6 +510,7 @@ export default function Portfolio() {
                   priority={currentPhotoIndex === 0}
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 90vw, 800px"
                   className="rounded-lg border-2 border-primary/20 object-cover w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
+                  style={{ objectPosition: lifePhotos[currentPhotoIndex].objectPosition }}
                 />
 
                 {/* Navigation Arrows */}
@@ -545,6 +556,7 @@ export default function Portfolio() {
                       height={60}
                       sizes="80px"
                       className="rounded-md object-cover w-16 h-12 sm:w-20 sm:h-15"
+                      style={{ objectPosition: photo.objectPosition }}
                     />
                   </button>
                 ))}
