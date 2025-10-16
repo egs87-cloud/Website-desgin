@@ -4,8 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Mail, Phone, MapPin, Github, Linkedin, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react"
+import { Mail, Phone, MapPin, Github, Linkedin, ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 
@@ -106,28 +105,6 @@ export default function Portfolio() {
           </div>
         </div>
         <div className="flex justify-center gap-4 flex-wrap">
-          <DropdownMenu modal={false}>
-            <DropdownMenuTrigger asChild>
-              <Button className="bg-primary hover:bg-primary/90 min-w-[140px]">
-                Get In Touch
-                <ChevronDown className="w-4 h-4 ml-2" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="center" className="z-[100] min-w-[200px]" sideOffset={5}>
-              <DropdownMenuItem asChild>
-                <a href="tel:+16072208407" className="flex items-center gap-2 cursor-pointer w-full px-3 py-2">
-                  <Phone className="w-4 h-4" />
-                  <span>Call (607) 220-8407</span>
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <a href="mailto:egs87@cornell.edu" className="flex items-center gap-2 cursor-pointer w-full px-3 py-2">
-                  <Mail className="w-4 h-4" />
-                  <span>Email egs87@cornell.edu</span>
-                </a>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
           <Button variant="outline" asChild>
             <a href="https://github.com/egs87-cloud" target="_blank" rel="noopener noreferrer">
               <Github className="w-4 h-4 mr-2" />
@@ -150,10 +127,10 @@ export default function Portfolio() {
           <CardContent className="pt-6">
             <p className="text-foreground leading-relaxed">
               I am a motivated biological sciences student from Cornell University with strong experience in data
-              analysis, experimental design, and laboratory work. My background combines computational biology,
-              statistical analysis, and an appreciation for molecular biology with a hands-on research and laboratory
-              setting. I am in search of a position to apply my skills in modeling and predictive analytics to support
-              experimentation and growth.
+              analysis, footwear design, and physiological measurement. My background combines computational biology,
+              statistical analysis, and an appreciation for design with a hands-on research and laboratory experience. I
+              wish to apply to this position to use my skills in design and science to support experimentation and
+              inform business and product choices.
             </p>
           </CardContent>
         </Card>
