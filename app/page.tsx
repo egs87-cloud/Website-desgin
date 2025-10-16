@@ -73,6 +73,8 @@ export default function Portfolio() {
           alt="Elijah Schechter"
           width={200}
           height={200}
+          priority
+          sizes="200px"
           className="rounded-full mx-auto mb-6 border-4 border-primary/20"
         />
         <h1 className="text-5xl font-bold text-foreground mb-4 font-[var(--font-heading)]">Elijah Schechter</h1>
@@ -190,6 +192,7 @@ export default function Portfolio() {
                 alt="3D rendered tendon models used for biomechanical simulation"
                 width={600}
                 height={400}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -199,6 +202,7 @@ export default function Portfolio() {
                 alt="Cross-sectional view of shoe sole design with multiple layers"
                 width={600}
                 height={400}
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -238,6 +242,7 @@ export default function Portfolio() {
               alt="Performance science lab setup with force plate analysis and biomechanics equipment"
               width={800}
               height={600}
+              sizes="(max-width: 768px) 100vw, 800px"
               className="w-full h-auto object-cover"
             />
           </div>
@@ -376,6 +381,7 @@ export default function Portfolio() {
                 alt="Elijah competing in the 800m at a track meet"
                 width={320}
                 height={240}
+                sizes="(max-width: 768px) 100vw, 320px"
                 className="rounded-lg border-2 border-primary/20 object-cover"
               />
             </div>
@@ -442,6 +448,7 @@ export default function Portfolio() {
                 alt="Elijah route-setting at the climbing wall"
                 width={320}
                 height={400}
+                sizes="(max-width: 768px) 100vw, 320px"
                 className="rounded-lg border-2 border-primary/20 object-cover object-center w-full h-[400px] md:h-[500px]"
                 style={{ objectPosition: "center 30%" }}
               />
@@ -491,6 +498,8 @@ export default function Portfolio() {
                   alt={lifePhotos[currentPhotoIndex].alt}
                   width={800}
                   height={600}
+                  priority={currentPhotoIndex === 0}
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 90vw, 800px"
                   className="rounded-lg border-2 border-primary/20 object-cover object-center w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
                   style={{ objectPosition: "center 30%" }}
                 />
@@ -533,6 +542,7 @@ export default function Portfolio() {
                       alt={photo.alt}
                       width={80}
                       height={60}
+                      sizes="80px"
                       className="rounded-md object-cover object-center w-16 h-12 sm:w-20 sm:h-15"
                       style={{ objectPosition: "center 30%" }}
                     />
