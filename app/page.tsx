@@ -103,15 +103,15 @@ export default function Portfolio() {
                 <ChevronDown className="w-4 h-4 ml-2" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="center">
+            <DropdownMenuContent align="center" className="z-50">
               <DropdownMenuItem asChild>
-                <a href="tel:+16072208407" className="flex items-center gap-2 cursor-pointer">
+                <a href="tel:+16072208407" className="flex items-center gap-2 cursor-pointer w-full">
                   <Phone className="w-4 h-4" />
                   Call (607) 220-8407
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href="mailto:egs87@cornell.edu" className="flex items-center gap-2 cursor-pointer">
+                <a href="mailto:egs87@cornell.edu" className="flex items-center gap-2 cursor-pointer w-full">
                   <Mail className="w-4 h-4" />
                   Email egs87@cornell.edu
                 </a>
@@ -188,7 +188,7 @@ export default function Portfolio() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
             <div className="rounded-lg overflow-hidden border-2 border-primary/20">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-10-01%20at%205.42.29%E2%80%AFPM-6tvOrtETiUNsZTOFFhxnAJNenWUqdu.png"
+                src="/images/tendon-models.png"
                 alt="3D rendered tendon models used for biomechanical simulation"
                 width={600}
                 height={400}
@@ -198,7 +198,7 @@ export default function Portfolio() {
             </div>
             <div className="rounded-lg overflow-hidden border-2 border-primary/20">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-10-01%20at%205.40.26%E2%80%AFPM-XWedYxGtCl4qmEjNR83G0oSWwAYrXl.png"
+                src="/images/shoe-sole-design.png"
                 alt="Cross-sectional view of shoe sole design with multiple layers"
                 width={600}
                 height={400}
@@ -238,7 +238,7 @@ export default function Portfolio() {
 
           <div className="rounded-lg overflow-hidden border-2 border-primary/20">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-07-27%20at%204.55.47%E2%80%AFPM.png-1UTMfkGKbLMkjsc1YCGejL3BBMwAtO.jpeg"
+              src="/images/wu-tsai-lab.png"
               alt="Performance science lab setup with force plate analysis and biomechanics equipment"
               width={800}
               height={600}
@@ -382,7 +382,7 @@ export default function Portfolio() {
                 width={320}
                 height={240}
                 sizes="(max-width: 768px) 100vw, 320px"
-                className="rounded-lg border-2 border-primary/20 object-cover"
+                className="rounded-lg border-2 border-primary/20 object-cover w-full h-auto"
               />
             </div>
           </div>
@@ -449,8 +449,7 @@ export default function Portfolio() {
                 width={320}
                 height={400}
                 sizes="(max-width: 768px) 100vw, 320px"
-                className="rounded-lg border-2 border-primary/20 object-cover object-center w-full h-[400px] md:h-[500px]"
-                style={{ objectPosition: "center 30%" }}
+                className="rounded-lg border-2 border-primary/20 object-cover w-full h-auto"
               />
             </div>
           </div>
@@ -500,8 +499,7 @@ export default function Portfolio() {
                   height={600}
                   priority={currentPhotoIndex === 0}
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 90vw, 800px"
-                  className="rounded-lg border-2 border-primary/20 object-cover object-center w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
-                  style={{ objectPosition: "center 30%" }}
+                  className="rounded-lg border-2 border-primary/20 object-cover w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
                 />
 
                 {/* Navigation Arrows */}
@@ -510,6 +508,7 @@ export default function Portfolio() {
                   size="icon"
                   className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-background/80 hover:bg-background h-8 w-8 sm:h-10 sm:w-10"
                   onClick={prevPhoto}
+                  aria-label="Previous photo"
                 >
                   <ChevronLeft className="w-3 h-3 sm:w-4 sm:h-4" />
                 </Button>
@@ -518,6 +517,7 @@ export default function Portfolio() {
                   size="icon"
                   className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-background/80 hover:bg-background h-8 w-8 sm:h-10 sm:w-10"
                   onClick={nextPhoto}
+                  aria-label="Next photo"
                 >
                   <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
                 </Button>
@@ -536,6 +536,7 @@ export default function Portfolio() {
                         ? "border-primary ring-2 ring-primary/20"
                         : "border-muted hover:border-primary/50"
                     }`}
+                    aria-label={`View photo ${index + 1}`}
                   >
                     <Image
                       src={photo.src || "/placeholder.svg"}
@@ -543,8 +544,7 @@ export default function Portfolio() {
                       width={80}
                       height={60}
                       sizes="80px"
-                      className="rounded-md object-cover object-center w-16 h-12 sm:w-20 sm:h-15"
-                      style={{ objectPosition: "center 30%" }}
+                      className="rounded-md object-cover w-16 h-12 sm:w-20 sm:h-15"
                     />
                   </button>
                 ))}
